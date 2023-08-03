@@ -58,7 +58,7 @@ data.orderBy("createdAt").onSnapshot((querySnapshot) => {
         if (change.type === "added") {
             const chatData = change.doc.data();
             if (chatData.room === chat.room) {
-                addChats(chatData.createdAt.fromDate(new Date()).toDate().toLocaleString()+" "+ chatData.username + ": " + chatData.message );
+                addChats(chatData.createdAt+" "+ chatData.username + ": " + chatData.message );
             }
         }
     });

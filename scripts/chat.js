@@ -9,7 +9,7 @@ getChats = async(room) => {
                 //go through the data in each collection
                 let chataData = element.data();
                 if (chataData.room === room) {
-                    addChats(chataData.createdAt.fromDate(new Date()).toDate().toLocaleString()+" "+ chataData.username + ": " + chataData.message );
+                    addChats(chataData.createdAt+" "+ chataData.username + ": " + chataData.message );
                 }
             })
         }).catch(err => {
